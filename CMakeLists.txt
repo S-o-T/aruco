@@ -36,7 +36,7 @@ target_compile_features(aruco PRIVATE cxx_std_11)
 target_compile_definitions(aruco PRIVATE USE_SVM_LABELER)
 set_target_compile_options(aruco)
 
-if(BUILD_UTILS)
+if(ARUCO_BUILD_UTILS)
   add_subdirectory(utils)
   add_subdirectory(utils_markermap)
   add_subdirectory(utils_calibration)
