@@ -32,7 +32,7 @@ int main(int argc, char** argv)
 
         cv::Mat image = cv::imread(argv[1]);
         cv::Mat image_grey;
-        cv::cvtColor(image, image_grey, CV_BGR2GRAY);
+        cv::cvtColor(image, image_grey, cv::COLOR_BGR2GRAY);
         if (image.empty())
             throw std::runtime_error("Image not loaded");
         int param1 = 7, param2 = 7;
@@ -47,7 +47,7 @@ int main(int argc, char** argv)
         std::vector<cv::Vec4i> hierarchy;
         std::vector<std::vector<cv::Point>> contours;
 
-        cv::findContours(out, contours, hierarchy, CV_RETR_LIST, CV_CHAIN_APPROX_NONE);
+        cv::findContours(out, contours, hierarchy, cv::RETR_LIST, cv::CHAIN_APPROX_NONE);
         cout << "contours.size()==" << contours.size() << endl;
         cv::drawContours(image, contours, -1, cv::Scalar(0, 0, 255), 1);
         // save all contours

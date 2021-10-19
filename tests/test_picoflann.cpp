@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
+#include <random>
 #include <opencv2/core.hpp>
 #include <opencv2/highgui.hpp>
 #include "markerdetector.h"

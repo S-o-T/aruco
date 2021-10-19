@@ -5,6 +5,8 @@
 find_package(OpenCV REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
+find_package(Threads REQUIRED)
+
 message(STATUS "OpenCV found, version: ${OpenCV_VERSION} in dir ${OpenCV_INCLUDE_DIRS}")
 
 if(NOT USE_OWN_EIGEN3)

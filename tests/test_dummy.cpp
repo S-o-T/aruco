@@ -27,7 +27,7 @@ int main(int argc,char **argv)
 
        cv::Mat im=cv::imread(argv[1]);
        cv::Mat im4;
-       cv::cvtColor(im,im4,CV_BGR2BGRA);
+       cv::cvtColor(im,im4,cv::COLOR_BGR2BGRA);
        splitView(im4);
        cv::imshow("im",im4);
        cv::waitKey(0);
