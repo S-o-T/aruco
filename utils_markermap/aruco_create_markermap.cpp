@@ -28,8 +28,8 @@ or implied, of Rafael Muñoz Salinas.
 
 // Creation of MarkerMap to be printed in a piece of paper. This is the old boards in Aruco 1.x.x
 
-#include "dictionary.h"
-#include "markermap.h"
+#include <aruco/dictionary.h>
+#include <aruco/markermap.h>
 #include <cstdio>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>

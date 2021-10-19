@@ -35,7 +35,7 @@ or implied, of Rafael Muñoz Salinas.
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <sstream>
-#include "aruco.h"
+#include <aruco/aruco.h>
 #include "aruco_calibration_grid_board_a4.h"
 #include "dirreader.h"
 #include <stdexcept>

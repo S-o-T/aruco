@@ -26,10 +26,10 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#include "markerdetector.h"
-#include "cameraparameters.h"
-#include "markerlabeler.h"
-#include "timers.h"
+#include <aruco/markerdetector.h>
+#include <aruco/cameraparameters.h>
+#include <aruco/markerlabeler.h>
+#include <aruco/timers.h>
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -40,7 +40,7 @@ or implied, of Rafael Muñoz Salinas.
 #include <valarray>
 #include <chrono>
 #include <thread>
-#include "debug.h"
+#include <aruco/debug.h>
 //#include "picoflann.h"
 
 #ifdef _DEBUG
@@ -300,7 +300,7 @@ void assignClass_fast( const cv::Mat &im, std::vector<cv::KeyPoint>& kpoints, bo
             int nc= newLab-1 - unions.size();
             if(nc==2)
             {
-                if(nZ > thresIm.total()-nZ) kp.class_id = 0;
+                if(nZ > static_cast<int>(thresIm.total())-nZ) kp.class_id = 0;
                 else kp.class_id = 1;
             }
             else if (nc > 2) {

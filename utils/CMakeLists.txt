@@ -1,4 +1,3 @@
-INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/src)
 add_executable(aruco_print_dictionary aruco_print_dictionary.cpp)
 add_executable(aruco_print_marker aruco_print_marker.cpp)
 add_executable(aruco_simple aruco_simple.cpp)
@@ -12,8 +11,3 @@ target_link_libraries(aruco_simple              aruco opencv_calib3d opencv_vide
 target_link_libraries(aruco_test                aruco opencv_calib3d opencv_highgui)
 target_link_libraries(aruco_tracker             aruco opencv_calib3d opencv_videoio opencv_highgui)
 target_link_libraries(aruco_batch_processing    aruco opencv_calib3d opencv_imgcodecs)
-
-#aruco_create_board
-INSTALL(TARGETS aruco_batch_processing aruco_tracker aruco_simple aruco_test aruco_print_marker aruco_print_dictionary       RUNTIME DESTINATION bin)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -latomic")

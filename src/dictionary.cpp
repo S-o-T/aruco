@@ -26,7 +26,7 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#include "dictionary.h"
+#include <aruco/dictionary.h>
 #include <exception>
 #include <stdint.h>
 #include <fstream>
@@ -34,7 +34,7 @@ or implied, of Rafael Muñoz Salinas.
 #include <vector>
 #include <bitset>
 #include <opencv2/imgproc/imgproc.hpp>
-#include "markermap.h"
+#include <aruco/markermap.h>
 #include <set>
 #include <stdexcept>
 using namespace std;

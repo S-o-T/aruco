@@ -29,8 +29,8 @@ or implied, of Rafael Muñoz Salinas.
 #ifndef _aruco_MarkerLabeler_
 #define _aruco_MarkerLabeler_
 
-#include "aruco_export.h"
-#include "dictionary.h"
+#include <aruco/aruco_export.h>
+#include <aruco/dictionary.h>
 #include <opencv2/core/core.hpp>
 
 namespace aruco

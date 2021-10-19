@@ -29,7 +29,7 @@ or implied, of Rafael Muñoz Salinas.
 #ifndef _Aruco_Marker_H
 #define _Aruco_Marker_H
 
-#include "aruco_export.h"
+#include <aruco/aruco_export.h>
 
 #include <opencv2/core/core.hpp>
 

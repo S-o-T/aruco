@@ -27,7 +27,7 @@ or implied, of Rafael Muñoz Salinas.
 */
 
 // This program converts a boardconfiguration file expressed in pixel to another one expressed in meters
-#include "markermap.h"
+#include <aruco/markermap.h>
 #include <iostream>
 using namespace std;
 using namespace aruco;

@@ -26,7 +26,7 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#include "svmmarkers.h"
+#include <aruco/svmmarkers.h>
 #include <iostream>
 #include <vector>
 #include <math.h>

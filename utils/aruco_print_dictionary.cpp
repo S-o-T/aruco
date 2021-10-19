@@ -28,7 +28,7 @@ or implied, of Rafael Muñoz Salinas.
 */
 
 
-#include "dictionary.h"
+#include <aruco/dictionary.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <string>

@@ -31,7 +31,7 @@ or implied, of Rafael Muñoz Salinas.
 #include <iostream>
 #include <fstream>
 #include <ctime>
-#include "aruco_export.h"
+#include <aruco/aruco_export.h>
 #include <map>
 #include <string>
 namespace aruco{

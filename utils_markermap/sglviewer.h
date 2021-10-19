@@ -34,7 +34,7 @@ or implied, of Rafael Muñoz Salinas.
 #include "sgl.h"
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-#include "markermap.h"
+#include <aruco/markermap.h>
 #include <string>
 #include <thread>
 #include <map>

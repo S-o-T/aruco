@@ -25,7 +25,7 @@ The views and conclusions contained in the software and documentation are those 
 authors and should not be interpreted as representing official policies, either expressed
 or implied, of Rafael Muñoz Salinas.
 */
-#include "cameraparameters.h"
+#include <aruco/cameraparameters.h>
 
 #include <opencv2/calib3d/calib3d.hpp>
 #include <opencv2/core/core.hpp>

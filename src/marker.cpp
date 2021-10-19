@@ -26,7 +26,7 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#include "marker.h"
+#include <aruco/marker.h>
 
 /// \todo set this definition in the cmake code
 #define _USE_MATH_DEFINES
@@ -36,8 +36,8 @@ or implied, of Rafael Muñoz Salinas.
 
 #include <cstdio>
 #include <math.h>
-#include "cameraparameters.h"
-#include "ippe.h"
+#include <aruco/cameraparameters.h>
+#include <aruco/ippe.h>
 
 namespace aruco
 {

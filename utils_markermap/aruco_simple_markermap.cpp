@@ -26,9 +26,9 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#include "aruco.h"
-#include "cvdrawingutils.h"
-#include "posetracker.h"
+#include <aruco/aruco.h>
+#include <aruco/cvdrawingutils.h>
+#include <aruco/posetracker.h>
 #include <fstream>
 #include <iostream>
 #include <opencv2/core/core.hpp>

@@ -26,7 +26,7 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#include "debug.h"
+#include <aruco/debug.h>
 #include <fstream>
  namespace aruco{
 int Debug::level=2;

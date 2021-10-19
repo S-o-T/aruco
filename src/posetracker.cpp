@@ -26,8 +26,8 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#include "posetracker.h"
-#include "ippe.h"
+#include <aruco/posetracker.h>
+#include <aruco/ippe.h>
 #include <set>
 #if  CV_MAJOR_VERSION < 3
 #include "levmarq.h"

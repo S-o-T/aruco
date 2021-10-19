@@ -1,7 +1,7 @@
 
-#include "markerdetector.h"
-#include "markermap.h"
-#include "cameraparameters.h"
+#include <aruco/markerdetector.h>
+#include <aruco/markermap.h>
+#include <aruco/cameraparameters.h>
 #include <opencv2/calib3d/calib3d.hpp>
 using namespace  std;
 using namespace  aruco;

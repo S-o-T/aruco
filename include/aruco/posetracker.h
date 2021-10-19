@@ -29,10 +29,10 @@ or implied, of Rafael Muñoz Salinas.
 #ifndef ARUCO_POSETRACKER
 #define ARUCO_POSETRACKER
 
-#include "aruco_export.h"
-#include "cameraparameters.h"
-#include "marker.h"
-#include "markermap.h"
+#include <aruco/aruco_export.h>
+#include <aruco/cameraparameters.h>
+#include <aruco/marker.h>
+#include <aruco/markermap.h>
 
 #include <map>
 #include <opencv2/core/core.hpp>

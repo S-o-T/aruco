@@ -35,8 +35,8 @@ or implied, of Rafael Muñoz Salinas.
 
 #include <dirent.h>
 #endif
-#include "aruco.h"
-#include "ippe.h"
+#include <aruco/aruco.h>
+#include <aruco/ippe.h>
 #include <iostream>
 #include <fstream>
 #include <opencv2/highgui/highgui.hpp>

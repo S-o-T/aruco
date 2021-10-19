@@ -29,10 +29,10 @@ or implied, of Rafael Muñoz Salinas.
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include "aruco.h"
-#include "cvdrawingutils.h"
+#include <aruco/aruco.h>
+#include <aruco/cvdrawingutils.h>
 #include <opencv2/highgui/highgui.hpp>
-#include "markerlabeler.h"
+#include <aruco/markerlabeler.h>
 using namespace cv;
 using namespace aruco;
 using namespace std;

@@ -30,9 +30,9 @@ or implied, of Rafael Muñoz Salinas.
 #define ArucoCalibrator_H
 #include <string>
 #include <vector>
-#include "marker.h"
-#include "markermap.h"
-#include "cameraparameters.h"
+#include <aruco/marker.h>
+#include <aruco/markermap.h>
+#include <aruco/cameraparameters.h>
 #include <thread>
 #include <mutex>
 namespace  aruco {

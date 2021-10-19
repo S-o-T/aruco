@@ -27,8 +27,8 @@ or implied, of Rafael Muñoz Salinas.
 */
 #include <opencv2/calib3d/calib3d.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-#include "cvdrawingutils.h"
-#include "cameraparameters.h"
+#include <aruco/cvdrawingutils.h>
+#include <aruco/cameraparameters.h>
 using namespace cv;
 namespace aruco
 {

@@ -26,48 +26,44 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#ifndef SVMMARKERS_H
-#define SVMMARKERS_H
+#ifndef ArucoDictionaryBasedMarkerDetector_H
+#define ArucoDictionaryBasedMarkerDetector_H
 
-#include "../markerlabeler.h"
+#include <aruco/dictionary.h>
+#include <aruco/markerlabeler.h>
 
-
-namespace aruco {
-
-
-/**
- * SVM Marker Detector Class
- *
- *
- */
-namespace impl{
-    class SVMMarkers;
-}
-
-class   SVMMarkers: public MarkerLabeler {
-    impl::SVMMarkers *_impl;
-  public:
-
-    SVMMarkers();
-    virtual ~SVMMarkers(){}
-    /**
-     * @brief getName
-     * @return
+#include <opencv2/core/core.hpp>
+namespace aruco
+{
+    /**Labeler using a dictionary
      */
-    std::string getName()const{return "SVM";}
+    class DictionaryBased : public MarkerLabeler
+    {
+    public:
+        virtual ~DictionaryBased()
+        {
+        }
+        // first, dictionary, second the maximum correction rate [0,1]. If 0,no correction, if 1, maximum allowed
+        // correction
+        void setParams(const Dictionary& dic, float max_correction_rate);
 
-    //loads the svm file that detects the markers
-    bool load(std::string path="") ;
-    /**
-     * Detect marker in a canonical image.
-     * Return marker id in 0 rotation, or -1 if not found
-     * Assign the detected rotation of the marker to nRotation
-     */
-     bool detect(const cv::Mat &in, int & marker_id,int &nRotations,std::string &additionalInfo) ;
-     int getBestInputSize();
-};
+        // main virtual class to o detection
+        bool detect(const cv::Mat& in, int& marker_id, int& nRotations,std::string &additionalInfo);
+        // returns the dictionary name
+        std::string getName() const;
 
+        int getNSubdivisions()const{return _nsubdivisions;}//
+
+    private:
+         bool getInnerCode(const cv::Mat& thres_img, int total_nbits, std::vector<uint64_t>& ids);
+        cv::Mat rotate(const cv::Mat& in);
+        uint64_t touulong(const cv::Mat& code);
+        std::vector<Dictionary> vdic;
+         void toMat(uint64_t code, int nbits_sq, cv::Mat& out);
+        int _nsubdivisions=0;
+        float _max_correction_rate;
+        std::string dicttypename;
+        std::map<uint32_t,std::vector<Dictionary*>> nbits_dict;
+    };
 }
-
-
-#endif // SVMMARKERS_H
+#endif

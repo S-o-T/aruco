@@ -26,44 +26,48 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#ifndef ArucoDictionaryBasedMarkerDetector_H
-#define ArucoDictionaryBasedMarkerDetector_H
+#ifndef SVMMARKERS_H
+#define SVMMARKERS_H
 
-#include "../dictionary.h"
-#include "../markerlabeler.h"
+#include <aruco/markerlabeler.h>
 
-#include <opencv2/core/core.hpp>
-namespace aruco
-{
-    /**Labeler using a dictionary
-     */
-    class DictionaryBased : public MarkerLabeler
-    {
-    public:
-        virtual ~DictionaryBased()
-        {
-        }
-        // first, dictionary, second the maximum correction rate [0,1]. If 0,no correction, if 1, maximum allowed
-        // correction
-        void setParams(const Dictionary& dic, float max_correction_rate);
 
-        // main virtual class to o detection
-        bool detect(const cv::Mat& in, int& marker_id, int& nRotations,std::string &additionalInfo);
-        // returns the dictionary name
-        std::string getName() const;
+namespace aruco {
 
-        int getNSubdivisions()const{return _nsubdivisions;}//
 
-    private:
-         bool getInnerCode(const cv::Mat& thres_img, int total_nbits, std::vector<uint64_t>& ids);
-        cv::Mat rotate(const cv::Mat& in);
-        uint64_t touulong(const cv::Mat& code);
-        std::vector<Dictionary> vdic;
-         void toMat(uint64_t code, int nbits_sq, cv::Mat& out);
-        int _nsubdivisions=0;
-        float _max_correction_rate;
-        std::string dicttypename;
-        std::map<uint32_t,std::vector<Dictionary*>> nbits_dict;
-    };
+/**
+ * SVM Marker Detector Class
+ *
+ *
+ */
+namespace impl{
+    class SVMMarkers;
 }
-#endif
+
+class   SVMMarkers: public MarkerLabeler {
+    impl::SVMMarkers *_impl;
+  public:
+
+    SVMMarkers();
+    virtual ~SVMMarkers(){}
+    /**
+     * @brief getName
+     * @return
+     */
+    std::string getName()const{return "SVM";}
+
+    //loads the svm file that detects the markers
+    bool load(std::string path="") ;
+    /**
+     * Detect marker in a canonical image.
+     * Return marker id in 0 rotation, or -1 if not found
+     * Assign the detected rotation of the marker to nRotation
+     */
+     bool detect(const cv::Mat &in, int & marker_id,int &nRotations,std::string &additionalInfo) ;
+     int getBestInputSize();
+};
+
+}
+
+
+#endif // SVMMARKERS_H

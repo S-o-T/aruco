@@ -27,7 +27,7 @@ or implied, of Rafael Muñoz Salinas.
 */
 
 
-#include "aruco.h"
+#include <aruco/aruco.h>
 #include <iostream>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>

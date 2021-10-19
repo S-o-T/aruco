@@ -26,7 +26,7 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#include "aruco.h"
+#include <aruco/aruco.h>
 #include "calibrator.h"
 #include <fstream>
 #include <iostream>

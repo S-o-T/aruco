@@ -26,11 +26,11 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#include "markerlabeler.h"
+#include <aruco/markerlabeler.h>
 #ifdef USE_SVM_LABELER
-#include "markerlabelers/svmmarkers.h"
+#include <aruco/svmmarkers.h>
 #endif
-#include "markerlabelers/dictionary_based.h"
+#include <aruco/dictionary_based.h>
  namespace aruco
 {
     cv::Ptr<MarkerLabeler> MarkerLabeler::create(Dictionary::DICT_TYPES dict_type,

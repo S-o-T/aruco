@@ -29,8 +29,8 @@ or implied, of Rafael Muñoz Salinas.
 #ifndef _Aruco_MarkerMap_h
 #define _Aruco_MarkerMap_h
 
-#include "aruco_export.h"
-#include "marker.h"
+#include <aruco/aruco_export.h>
+#include <aruco/marker.h>
 
 #include <opencv2/core/core.hpp>
 

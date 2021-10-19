@@ -29,7 +29,7 @@ or implied, of Rafael Muñoz Salinas.
 #ifndef ARUCO_DICTIONARY_
 #define ARUCO_DICTIONARY_
 
-#include "aruco_export.h"
+#include <aruco/aruco_export.h>
 
 #include <opencv2/core/core.hpp>
 

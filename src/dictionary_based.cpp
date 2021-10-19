@@ -26,7 +26,7 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Rafael Muñoz Salinas.
 */
 
-#include "dictionary_based.h"
+#include <aruco/dictionary_based.h>
 
 #include <opencv2/imgproc/imgproc.hpp>
 

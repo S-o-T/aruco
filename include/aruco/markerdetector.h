@@ -30,7 +30,7 @@ or implied, of Rafael Muñoz Salinas.
 #ifndef _ARUCO_MarkerDetector_H
 #define _ARUCO_MarkerDetector_H
 
-#include "aruco_export.h"
+#include <aruco/aruco_export.h>
 #include <opencv2/core/core.hpp>
 #include <cstdio>
 #include <iostream>
@@ -38,7 +38,7 @@ or implied, of Rafael Muñoz Salinas.
 #include <mutex>
 #include <condition_variable>
 #include <vector>
-#include "marker.h"
+#include <aruco/marker.h>
 
 namespace aruco
 {

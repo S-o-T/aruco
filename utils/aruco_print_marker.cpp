@@ -28,7 +28,7 @@ or implied, of Rafael Muñoz Salinas.
 
 // saves to file an image of the  indicated marker from the dictionary indicated
 
-#include "aruco.h"
+#include <aruco/aruco.h>
 #include <iostream>
 
 #include <opencv2/highgui/highgui.hpp>
