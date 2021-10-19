@@ -31,7 +31,7 @@ target_include_directories(aruco PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE
 set_target_properties(aruco PROPERTIES          # create *nix style library versions + symbolic links
         DEFINE_SYMBOL ARUCO_DSO_EXPORTS
         )
-target_link_libraries(aruco PUBLIC opencv_core opencv_imgproc opencv_calib3d opencv_features2d opencv_ml opencv_highgui Threads::Threads)
+target_link_libraries(aruco PUBLIC Eigen3::Eigen opencv_core opencv_imgproc opencv_calib3d opencv_features2d opencv_ml opencv_highgui Threads::Threads)
 target_compile_features(aruco PRIVATE cxx_std_11)
 target_compile_definitions(aruco PRIVATE USE_SVM_LABELER)
 set_target_compile_options(aruco)
